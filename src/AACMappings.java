@@ -1,3 +1,6 @@
+import static java.lang.reflect.Array.newInstance;
+import java.util.NoSuchElementException;
+
 /**
  * Creates a set of mappings of an AAC that has two levels,
  * one for categories and then within each category, it has
@@ -6,10 +9,14 @@
  * and updating the set of images that would be shown and handling
  * an interactions.
  * 
- * @author Catie Baker & YOUR NAME HERE
+ * @author Catie Baker & Leonardo Alves Nunes
  *
  */
 public class AACMappings implements AACPage {
+	// +--------+------------------------------------------------------
+  // | Fields |
+  // +--------+
+	AssociativeArray associativeMapping;
 	
 	/**
 	 * Creates a set of mappings for the AAC based on the provided
@@ -32,7 +39,7 @@ public class AACMappings implements AACPage {
 	 * @param filename the name of the file that stores the mapping information
 	 */
 	public AACMappings(String filename) {
-
+		this.associativeMapping = new AssociativeArray<String, AACCategory>();
 	}
 	
 	/**
@@ -59,7 +66,8 @@ public class AACMappings implements AACPage {
 	 * it should return an empty array
 	 */
 	public String[] getImageLocs() {
-		return null;
+		return new String[] { "img/food/icons8-french-fries-96.png",
+        "img/food/icons8-watermelon-96.png" }; // STUB
 	}
 	
 	/**
@@ -112,7 +120,7 @@ public class AACMappings implements AACPage {
 	 * on the default category
 	 */
 	public String getCategory() {
-		return null;
+		return "Fooood";
 	}
 
 

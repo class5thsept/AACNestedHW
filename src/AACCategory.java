@@ -4,7 +4,7 @@ import java.util.NoSuchElementException;
  * Represents the mappings for a single category of items that should
  * be displayed
  * 
- * @author Catie Baker & YOUR NAME HERE
+ * @author Catie Baker & Leonardo Alves Nunes
  *
  */
 public class AACCategory implements AACPage {
@@ -33,7 +33,8 @@ public class AACCategory implements AACPage {
 	 * it should return an empty array
 	 */
 	public String[] getImageLocs() {
-		return null;
+		return new String[] { "img/food/icons8-french-fries-96.png",
+        "img/food/icons8-watermelon-96.png" }; // STUB
 	}
 
 	/**
@@ -41,7 +42,7 @@ public class AACCategory implements AACPage {
 	 * @return the name of the category
 	 */
 	public String getCategory() {
-		return "";
+		return "Something for getCategory";
 	}
 
 	/**
@@ -52,7 +53,7 @@ public class AACCategory implements AACPage {
 	 * 		   category
 	 */
 	public String select(String imageLoc) {
-		return "";
+		return "Selected";
 	}
 
 	/**
