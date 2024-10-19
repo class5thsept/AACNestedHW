@@ -16,7 +16,9 @@ public class AACMappings implements AACPage {
 	// +--------+------------------------------------------------------
   // | Fields |
   // +--------+
-	AssociativeArray associativeMapping;
+	private AssociativeArray<String, AACCategory> associativeMapping;
+	private AACCategory curCategory;
+	private String filename;
 	
 	/**
 	 * Creates a set of mappings for the AAC based on the provided
@@ -39,6 +41,7 @@ public class AACMappings implements AACPage {
 	 * @param filename the name of the file that stores the mapping information
 	 */
 	public AACMappings(String filename) {
+		this.filename = filename;
 		this.associativeMapping = new AssociativeArray<String, AACCategory>();
 	}
 	
